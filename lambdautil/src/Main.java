@@ -1,7 +1,9 @@
 import com.nsc.lambdautil.LambdaUtil;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collector;
 
 public class Main {
 
@@ -17,9 +19,12 @@ public class Main {
 //            }
 //        });
 //        t1.start();
-
+        List<Integer> newList = new ArrayList<>();
         List<Integer> lst = Arrays.asList(1,2,10,30,2);
-        lst.stream().forEach(p->System.out.println(p));
+        lst.forEach(p->System.out.println(p));
+        //newList.forEach(p->System.out.println(p));
+        //lst.stream().filter(p->p>=10).forEach(p->System.out.println(p));
+        //lst.stream().forEach(p->System.out.println(p));
         //LambdaUtil.printWithIndex(lst, Main::printItem);
         //LambdaUtil.printWith(lst,p->p>3);
        // System.out.println(LambdaUtil.toStringWith(lst,p->p>3));
