@@ -22,6 +22,8 @@ public class Main {
         List<Integer> newList = new ArrayList<>();
         List<Integer> lst = Arrays.asList(1,2,10,30,2);
         lst.forEach(p->System.out.println(p));
+        long i = lst.stream().count();
+        System.out.println("count "+i);
         //newList.forEach(p->System.out.println(p));
         //lst.stream().filter(p->p>=10).forEach(p->System.out.println(p));
         //lst.stream().forEach(p->System.out.println(p));
