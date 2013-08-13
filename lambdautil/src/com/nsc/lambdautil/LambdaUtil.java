@@ -13,6 +13,14 @@ import java.util.function.Predicate;
  */
 public class LambdaUtil {
 
+    public static <T> void printWith(Collection<T> lst, Predicate<T> tester){
+        for(T t:lst){
+            if(tester.test(t)){
+               System.out.println(t);
+            }
+        }
+    }
+
     public static <T> Collection<T> filter(Collection<T> lst, Predicate<T> tester){
         Collection<T> ret = new ArrayList<T>();
         for(T t:lst){
