@@ -13,6 +13,17 @@ import java.util.function.Predicate;
  */
 public class LambdaUtil {
 
+    public static <T> String toStringWith(Collection<T> lst, Predicate<T> tester){
+        String ret = "[";
+        for(T t:lst){
+            if(tester.test(t)) {
+                ret+=t+",";
+            }
+        }
+        ret = ret.substring(0,ret.length()-1);
+        return ret+"]";
+    }
+
     public static <T> void printWith(Collection<T> lst, Predicate<T> tester){
         for(T t:lst){
             if(tester.test(t)){
