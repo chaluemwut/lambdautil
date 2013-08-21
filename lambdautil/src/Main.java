@@ -19,7 +19,8 @@ public class Main {
 //        t1.start();
 
         List<Integer> lst = Arrays.asList(1,2,10,30,2);
-        LambdaUtil.printWithIndex(lst, Main::printItem);
+        lst.stream().forEach(p->System.out.println(p));
+        //LambdaUtil.printWithIndex(lst, Main::printItem);
         //LambdaUtil.printWith(lst,p->p>3);
        // System.out.println(LambdaUtil.toStringWith(lst,p->p>3));
     }
